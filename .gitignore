@@ -1,0 +1,34 @@
+# Terraform state contains the client secret in plain text - never commit it
+*.tfstate
+*.tfstate.*
+.terraform/
+crash.log
+crash.*.log
+*.tfplan
+tfplan
+
+# Variable files can hold subscription IDs or secrets
+*.tfvars
+*.tfvars.json
+!terraform.tfvars.example
+
+# Override files are usually local-only
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Local Azure CLI profile used by the test scripts
+.azure-sp/
+
+# Test output (IDs, file contents) - screenshots go in the report instead
+evidence/*
+!evidence/.gitkeep
+
+# Editors / OS
+.vscode/
+*.swp
+.DS_Store
+
+# NOTE: .terraform.lock.hcl is intentionally NOT ignored. Commit it so other
+# engineers get the same provider versions.

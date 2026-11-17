@@ -1,0 +1,11 @@
+# Copy to terraform.tfvars (which is gitignored) and fill in.
+subscription_id = "00000000-0000-0000-0000-000000000000"
+student_name    = "douglas"
+location        = "westus2"
+
+# Leave false for the first apply (Part 3: test BEFORE RBAC).
+# Flip to true for Part 4/5. Flip back to false for the bonus "break it".
+grant_blob_access = false
+
+# Only set this if stuvuit3200<student_name> is already taken globally.
+# storage_account_name = "stuvuit3200douglas01"
